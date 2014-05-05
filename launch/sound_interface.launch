@@ -1,0 +1,14 @@
+<launch>
+
+  <node name="recognizer" pkg="pocketsphinx" type="recognizer.py">
+    <param name="mic_name" value="bluez_source.9C_3A_AF_A5_82_07"/>
+    <param name="lm" value="$(find sound_interface)/language/voice_cmd.lm"/>
+    <param name="dict" value="$(find sound_interface)/language/voice_cmd.dic"/>
+  </node>
+
+  <node name="soundplay" pkg="sound_play" type="soundplay_node.py"/>
+  <node name="voice_iface" pkg="sound_interface" type="voice.py" output="screen"/>
+  <node name="button_iface" pkg="sound_interface" type="button.py">
+    <param name="MAC" value="9C_3A_AF_A5_82_07"/>
+  </node>
+</launch>

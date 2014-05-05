@@ -1,0 +1,45 @@
+Language model created by QuickLM on Sat Apr 19 08:26:26 EDT 2014
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 3 sentences and 7 words
+
+\data\
+ngram 1=7
+ngram 2=8
+ngram 3=7
+
+\1-grams:
+-0.9379 </s> -0.3010
+-0.9379 <s> -0.2478
+-1.4150 FOLLOW -0.2840
+-1.4150 HALT. -0.2478
+-1.4150 ME. -0.2478
+-0.9379 PIONEER, -0.2478
+-1.4150 STOP. -0.2478
+
+\2-grams:
+-0.3010 <s> PIONEER, 0.0000
+-0.3010 FOLLOW ME. 0.0000
+-0.3010 HALT. </s> -0.3010
+-0.3010 ME. </s> -0.3010
+-0.7782 PIONEER, FOLLOW 0.0000
+-0.7782 PIONEER, HALT. 0.0000
+-0.7782 PIONEER, STOP. 0.0000
+-0.3010 STOP. </s> -0.3010
+
+\3-grams:
+-0.7782 <s> PIONEER, FOLLOW
+-0.7782 <s> PIONEER, HALT.
+-0.7782 <s> PIONEER, STOP.
+-0.3010 FOLLOW ME. </s>
+-0.3010 PIONEER, FOLLOW ME.
+-0.3010 PIONEER, HALT. </s>
+-0.3010 PIONEER, STOP. </s>
+
+\end\
